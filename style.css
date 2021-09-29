@@ -71,3 +71,11 @@ body {
 .user-info h2 {
   margin-top: 0;
 }
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  max-width: 400px;
+}
