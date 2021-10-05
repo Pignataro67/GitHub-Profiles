@@ -27,6 +27,13 @@ async function getRepos(username) {
   }
 }
 
+function createUserCard(user) {
+  const userID = user.name || user.login
+  const userBio = user.bio ? `<p>${user.bio}</p>` : ''
+  
+  main.innerHTML = cardHTML  
+}
+
 function createErrorCard(msg) {
   const cardHTML = `
     <div class="card">
