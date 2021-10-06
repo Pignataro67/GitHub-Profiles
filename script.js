@@ -49,7 +49,7 @@ function createUserCard(user) {
 </div>
   `
   main.innerHTML = cardHTML  
-  
+
 }
 
 function createErrorCard(msg) {
@@ -58,6 +58,7 @@ function createErrorCard(msg) {
       <h1>${msg}</h1>
     </div>
   `
+
   main.innerHTML = cardHTML
 }
 
@@ -76,3 +77,15 @@ function addReposToCard(repos) {
     reposEl.appendChild(repoEl)
   })
 }
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const user = search.value
+
+  if(user) {
+    getUser(user)
+
+    search.value = ''
+  }
+})
